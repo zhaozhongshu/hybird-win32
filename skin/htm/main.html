@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bootstrap popup example</title>
+    <link href="res:/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="res:/js/jquery.min.js"></script>
+    <script src="res:/js/bootstrap.min.js"></script>
+</head>
+<body dlg_autosize="true">
+
+    <div class="container" style="padding: 100px 50px 10px;">
+        <button type="button" class="btn btn-default" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="left"
+                data-content="left popup data">
+            popup left
+        </button>
+        <button type="button" class="btn btn-primary" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="top"
+                data-content="top popup data">
+            popup top
+        </button>
+        <button type="button" class="btn btn-success" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="bottom"
+                data-content="popup bottom data" onclick="window.external.resizeWindow(600,400);">
+            resizeWindow(600,400)
+        </button>
+        <button type="button" class="btn btn-warning" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="right popup data" onclick="window.external.centerWindow();">
+            centerWindow
+        </button>
+        <button type="button" class="btn btn-warning" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="right popup data" onclick="window.external.showTitleBar(0);">
+            hide titlebar
+        </button>
+        <button type="button" class="btn btn-warning" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="right popup data" onclick="window.external.showTitleBar(1);">
+            show titlebar
+        </button>
+    </div>
+
+    <script>
+        $(function () {
+            $("[data-toggle='popover']").popover();
+        });
+    </script>
+    </div>
+
+</body>
+</html>			
